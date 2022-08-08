@@ -1,4 +1,6 @@
 class Api::V1::MessagesController < ApplicationController
+  protect_from_forgery with: :null_session
+
   def index
     messages = Message.all
 
@@ -6,7 +8,7 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def show
-    message = Message.find_by(rand(Message.first.id..Message.last.id))
+    message = Message.find(rand(Message.first.id..Message.last.id))
 
     render json: MessageSerializer.new(message).serialized_json
   end
