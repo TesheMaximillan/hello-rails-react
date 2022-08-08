@@ -30,7 +30,7 @@ gem "jbuilder"
 # Use webpacker and react-rails for frontend development
 gem "webpacker"
 gem "react-rails"
-
+gem 'fast_jsonapi'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
