@@ -10,6 +10,7 @@ const Greeting = () => {
   }, []);
 
   const message = useSelector(state => state.reducer);
+
   return (
     <div>
       <h1>Random Greeting</h1>
